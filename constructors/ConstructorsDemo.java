@@ -1,9 +1,10 @@
-// Constructors
-    // same name as class
-    // no return type
-    // called only once for one object - when creating the object
+package constructors;
 
-// Java does not have Destructor - it has automatic garbage collection
+/*
+ * Constructors
+ * same as class; no return type; called only once for one object (when creating the object);
+ * Java does not have Destructor - it has automatic garbage collection 
+*/
 
 class Student {
     String name;
@@ -31,7 +32,7 @@ class Student {
     }
 }
 
-public class Constructors {
+public class ConstructorsDemo {
     public static void main(String[] args) {
         Student s1 = new Student();
         s1.name = "Saurabh";
