@@ -1,4 +1,4 @@
-package bank;
+package src.bank;
 
 // class Account {
 //     public String name;
@@ -23,19 +23,25 @@ package bank;
 //     }
 // }
 
+/*
+ * ENCAPSULATION 
+ * data (propeties) + functions (methods) = inside one unit called CLASS
+*/
+
 public class Account {
-    
-    // ACCESS MODIFIERS
+
+    // Data Hiding using ACCESS MODIFIERS
     public String name;
     protected String email;
     private String password;
 
     // Getters and Setters
-    public void setPassword(String pwd) {
+    private void setPassword(String pwd) {
         this.password = pwd;
     }
 
     public String getPassword() {
+        setPassword("onlyGetMethodCanSetPwd");
         return this.password;
     }
 }

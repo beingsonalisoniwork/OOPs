@@ -1,4 +1,4 @@
-package oops;
+package src.oops;
 
 public class Pen {
     String color;

@@ -1,5 +1,5 @@
-package oops;
-import bank.Account;
+package src.oops;
+import src.bank.Account;
 
 /*
  * Package
@@ -23,6 +23,20 @@ import bank.Account;
 //         // 'this' keyword refers to current instance/object of class
 //     }
 // }
+
+/*
+ * STATIC Keyword
+ * memory is given only once
+*/
+
+class Student {
+    String name; // object
+    static String school; // every object inside this class will have same school name
+
+    public static void changeSchool() {
+        school = "newSchoolName";
+    }
+}
 
 public class OOPs {
     public static void main(String[] agrs) {
@@ -54,8 +68,23 @@ public class OOPs {
         pen2.printProperties();
 
         // PACKAGE
+
+        /*
+         * ENCAPSULATION 
+         * data (propeties) + functions (methods) = inside one unit called CLASS
+        */
+
         // bank.Account a1 = new bank.Account(); // if import statement was not present;
         Account a1 = new Account();
         a1.name = "customer1";
+        // a1.setPassword("123456");
+        String pwd = a1.getPassword();
+        System.out.println(pwd);
+
+        // static methods or variables can be accessed using Class name
+        Student.school = "HRMS";
+        Student s1 = new Student();
+        s1.name = "Ritaali";
+        // System.out.println(s1.school);
     } 
 }
